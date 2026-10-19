@@ -21,6 +21,17 @@ app = typer.Typer(
 )
 
 
+@app.callback()
+def main() -> None:
+    """Group callback.
+
+    Typer collapses a single-command app into a bare command with no subcommand
+    name, so `utr-mrl version` would fail until a second command is registered.
+    Declaring a callback forces subcommand mode permanently, which keeps the CLI
+    surface stable as commands are added stage by stage.
+    """
+
+
 @app.command()
 def version() -> None:
     """Print the installed package version."""
