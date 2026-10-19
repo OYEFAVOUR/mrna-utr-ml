@@ -1,8 +1,8 @@
 # Model card — mrna-utr-ml
 
-> **Status:** placeholder. Trained models do not exist yet; metrics, intended-use
-> and fairness sections are completed at Stage 8 and Stage 11. What follows is
-> true of the data and the splits as of Stage 3.
+> **Status:** in progress. No model has been trained yet, so the metrics section
+> is empty. Everything stated below about the data, its limitations and the
+> evaluation design is current.
 
 ## Model details
 

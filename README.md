@@ -2,16 +2,35 @@
 
 Predict the translation efficiency of a 5'UTR from sequence, then design better ones.
 
-Given a 5'UTR, the model predicts its **mean ribosome load (MRL)** — how many ribosomes an mRNA
-carrying that UTR loads, and therefore how much protein it makes per molecule. A constrained
-optimiser then proposes new UTRs with higher predicted MRL, which is the inner loop of mRNA
-construct design.
-
-> **Status:** in active development. Results are filled in at Stage 8.
+> **Status:** in active development — the results table is populated as models are trained.
 
 <p align="center">
   <img src="docs/figures/overview.svg" alt="Four-stage loop: the mRNA construct, the polysome-profiling measurement that yields mean ribosome load, the sequence-to-MRL model, and the constrained optimiser whose proposed 5'UTRs feed back into the construct. Below, the sequence features the model has to learn: out-of-frame and in-frame upstream AUGs, GC content, and Kozak context." width="100%">
 </p>
+
+---
+
+## Why this matters
+
+In an mRNA therapeutic the coding sequence is fixed by the protein you need to make. The 5'UTR is
+not. It largely determines how many ribosomes load onto each transcript, and therefore how much
+protein every delivered mRNA molecule produces. More protein per molecule means a lower dose, which
+means less lipid nanoparticle, less reactogenicity and lower cost of goods — so the 5'UTR is one of
+the cheapest levers available in construct design, and one of the few that can be optimised
+computationally.
+
+The quantity that captures this is **mean ribosome load (MRL)**: the average number of ribosomes
+riding a transcript, measured by separating mRNAs on a polysome gradient and sequencing each
+fraction. A UTR with MRL ≈ 9 is translated hard; one with MRL ≈ 2 is largely ignored. The dominant
+sequence determinant is upstream AUGs — a ribosome that starts at one never reaches the real start
+codon — modulated by their reading frame, their Kozak context, and secondary structure in the
+scanning path.
+
+Measuring MRL for a candidate UTR costs a wet-lab round. Predicting it costs milliseconds, which
+turns UTR selection into a search problem. This project trains a model on 326,033 measured UTRs,
+checks by in silico mutagenesis that it has learned initiation biology rather than dataset
+artefacts, and then uses it to propose new sequences with higher predicted MRL under
+manufacturability constraints.
 
 ---
 

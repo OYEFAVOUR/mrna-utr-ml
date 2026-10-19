@@ -92,7 +92,7 @@ class TestTrueMrl:
 
     def test_gc_effect_is_negative_but_weak(self):
         """GC must matter, but far less than a uAUG -- otherwise the GC-only
-        baseline would be strong and the comparison in stage 6 meaningless."""
+        baseline would be strong and the model comparison meaningless."""
         at_rich = "AT" * (UTR_LENGTH // 2)
         gc_rich = "GC" * (UTR_LENGTH // 2)
         assert "ATG" not in at_rich and "ATG" not in gc_rich
@@ -252,8 +252,8 @@ class TestMakeSyntheticMpra:
         noise is already small for the large majority of UTRs: sd(error) is 0.07
         above 1,000 reads against 0.57 below 50. So a read-count filter is a
         cleanup of a thin tail -- roughly 3% of the real library below 50 reads
-        -- not a major lever on model performance. Asserted here so stage 4 does
-        not overclaim what the filter buys.
+        -- not a major lever on model performance. Asserted here so the
+        filtering step cannot overclaim what it buys.
         """
         big = make_synthetic_mpra(40_000, seed=0)
         err = big["rl"] - big["true_mrl"]

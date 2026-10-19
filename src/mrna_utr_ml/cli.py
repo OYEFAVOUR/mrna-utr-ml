@@ -1,15 +1,15 @@
 """Command line interface for mrna-utr-ml.
 
-Subcommands are added as each stage of the project lands:
+Commands:
 
-    download   fetch the Sample et al. 2019 MPRA data from GEO   (stage 2)
-    synth      write a synthetic dataset with known ground truth (stage 2)
-    split      build reproducible train/val/test splits           (stage 3)
-    train      train a model from a YAML config                  (stage 7)
-    evaluate   score a trained model on the held-out test set    (stage 8)
-    interpret  in silico mutagenesis to expose learned motifs    (stage 9)
-    predict    score new UTR sequences                           (stage 6)
-    design     optimise a UTR for predicted MRL under constraints(stage 10)
+    download   fetch the Sample et al. 2019 MPRA data from GEO
+    synth      write a synthetic dataset with known ground truth
+    split      build reproducible train/val/test splits
+    train      train a model from a YAML config
+    evaluate   score a trained model on the held-out test set
+    interpret  in silico mutagenesis to expose learned motifs
+    predict    score new UTR sequences
+    design     optimise a UTR for predicted MRL under constraints
 """
 
 from __future__ import annotations

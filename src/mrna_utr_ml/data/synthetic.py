@@ -56,8 +56,8 @@ Each piece encodes a real mechanism:
   it is what the real data shows.
 * **GC reduces load** via secondary structure in the scanning path. Fitted from
   the real data at -3.5 MRL per unit GC fraction, which is weaker than a uAUG
-  but not negligible -- GC alone reaches r = -0.28, so the GC-only baseline in
-  stage 6 is a real baseline rather than a straw man.
+  but not negligible -- GC alone reaches r = -0.28, so the GC-only baseline is a
+  real baseline rather than a straw man.
 * **Noise shrinks with read depth**, mirroring the assay's counting statistics.
 
 Calibration
@@ -89,7 +89,7 @@ Three known mismatches, left in deliberately rather than papered over:
 2. **The low-read tail is thinner than reality**: 0.4% of synthetic UTRs fall
    below 50 reads against 2.95% of real ones, because real log-reads are
    left-skewed and a two-parameter lognormal cannot match both the median and
-   the tail. Consequence: the read-count filter in stage 4 removes less here
+   the tail. Consequence: the read-count filter removes less here
    than it will on real data, so its benefit must be measured on the real file
    rather than inferred from synthetic runs.
 3. **Read depth and uAUG content are independent here, but coupled in the real
@@ -98,7 +98,7 @@ Three known mismatches, left in deliberately rather than papered over:
    (2.21, 1.54, 1.53, 1.58, 1.75) because the deepest rows carry more true
    biological variance as well as less measurement noise. Reproducing that
    would mean modelling why library abundance correlates with uAUG content,
-   which is unknown. The consequence matters for stage 3: selecting a test set
+   which is unknown. This matters when choosing a test set: selecting one
    by read depth -- as the published split does -- selects a slice with a
    different feature and label distribution from the training data.
 """
