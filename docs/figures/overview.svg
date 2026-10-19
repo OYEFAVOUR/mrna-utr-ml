@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600"
-     role="img" aria-label="How the project works: a massively parallel assay measures ribosome load for 326,033 random 5-prime UTRs; a model learns the sequence rules; the rules are read out by in silico mutagenesis; an optimiser then proposes new UTRs under design constraints, closing the loop back to the mRNA construct.">
+     role="img" aria-label="How the project works: a massively parallel assay measures ribosome load for 326,033 random 5-prime UTRs; a model learns the sequence rules; the rules are read out by in silico mutagenesis; an optimiser proposes new sequences subject to design constraints, which re-enter the construct.">
   <title>From MPRA measurement to designed 5'UTRs</title>
   <desc>A four-stage loop: the mRNA construct, the polysome-profiling measurement, the sequence-to-MRL model, and the constrained optimiser that feeds proposed UTRs back into the construct.</desc>
 
@@ -7,7 +7,7 @@
 
   <!-- ================= title ================= -->
   <text x="40" y="36" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">Designing 5&#8242;UTRs for mRNA therapeutics</text>
-  <text x="40" y="60" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#64748b">The 5&#8242;UTR is the tunable knob on protein yield per mRNA molecule. This project measures it, learns it, explains it, then designs it.</text>
+  <text x="40" y="60" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#64748b">The 5&#8242;UTR governs translation initiation and therefore protein output per mRNA molecule. Measurement, modelling, interpretation and model-guided design.</text>
 
   <!-- ================= station 1: the construct ================= -->
   <rect x="40" y="90" width="250" height="260" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
@@ -27,13 +27,13 @@
   <text x="172" y="205" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#3b5fa8">payload CDS</text>
   <text x="230" y="205" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" fill="#64748b">3&#8242;UTR</text>
 
-  <text x="165" y="243" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">The payload is fixed by the protein</text>
-  <text x="165" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">you need. The 5&#8242;UTR is not.</text>
+  <text x="165" y="243" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">The coding sequence is set by the</text>
+  <text x="165" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">target protein; the 5&#8242;UTR is not.</text>
 
   <line x1="76" y1="277" x2="254" y2="277" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="165" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">higher ribosome load per transcript</text>
-  <text x="165" y="316" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">= more protein per dose</text>
-  <text x="165" y="332" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">= less LNP, less reactogenicity</text>
+  <text x="165" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">Higher ribosome load per transcript</text>
+  <text x="165" y="316" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">greater protein output per dose</text>
+  <text x="165" y="332" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">lower LNP burden and reactogenicity</text>
 
   <!-- ================= station 2: the measurement ================= -->
   <rect x="330" y="90" width="250" height="260" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
@@ -41,7 +41,7 @@
   <text x="352" y="123" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
   <text x="374" y="123" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">The measurement</text>
 
-  <text x="455" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">326,033 random 50-nt 5&#8242;UTRs, pooled</text>
+  <text x="455" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">326,033 randomised 50-nt 5&#8242;UTRs, pooled</text>
   <text x="455" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">polysome profiling resolves transcripts</text>
   <text x="455" y="180" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">by ribosome occupancy</text>
 
@@ -62,8 +62,8 @@
   <circle cx="438" cy="276" r="5" fill="#0e7490"/><circle cx="451" cy="276" r="5" fill="#0e7490"/>
   <text x="464" y="285" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e7490">MRL &#8776; 9</text>
 
-  <text x="455" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">Mean ribosome load (MRL):</text>
-  <text x="455" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">one value per UTR, bounded 0&#8211;13</text>
+  <text x="455" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">Mean ribosome load (MRL): one value</text>
+  <text x="455" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">per sequence, bounded 0&#8211;13</text>
 
   <!-- ================= station 3: the model ================= -->
   <rect x="620" y="90" width="250" height="260" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
@@ -93,8 +93,8 @@
   <text x="745" y="261" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#1e3a8a">1D CNN  /  k-mer + XGBoost</text>
   <line x1="745" y1="275" x2="745" y2="291" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#tip)"/>
   <text x="745" y="310" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">predicted MRL</text>
-  <text x="745" y="330" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">millions of UTRs per minute,</text>
-  <text x="745" y="344" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">instead of weeks per wet-lab round</text>
+  <text x="745" y="330" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">evaluates ~10&#8310; sequences per minute,</text>
+  <text x="745" y="344" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">versus one reporter assay per round</text>
 
   <!-- ================= station 4: the design ================= -->
   <rect x="910" y="90" width="250" height="260" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
@@ -103,7 +103,7 @@
   <text x="954" y="123" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">The design</text>
 
   <text x="1035" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">in silico directed evolution</text>
-  <text x="1035" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">mutate &#8594; score &#8594; select</text>
+  <text x="1035" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">mutate, score, select</text>
 
   <text x="930" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">start</text>
   <rect x="962" y="186" width="60" height="11" rx="2" fill="#cbd5e1"/>
@@ -115,14 +115,14 @@
   <rect x="962" y="232" width="110" height="11" rx="2" fill="#7c5fa8"/>
 
   <text x="1035" y="258" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">predicted MRL &#8594;</text>
-  <text x="1035" y="277" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">held to manufacturable constraints</text>
+  <text x="1035" y="277" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">subject to manufacturability constraints</text>
   <rect x="936" y="286" width="88" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="980" y="300" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">GC 40&#8211;60%</text>
   <rect x="1032" y="286" width="100" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="1082" y="300" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">no new uAUG</text>
 
-  <text x="1035" y="324" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">in silico candidates only &#8212;</text>
-  <text x="1035" y="340" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">wet-lab validation still required</text>
+  <text x="1035" y="324" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">computational candidates; experimental</text>
+  <text x="1035" y="340" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">validation required</text>
 
   <!-- ================= flow arrows between stations ================= -->
   <defs>
@@ -138,8 +138,8 @@
   <line x1="872" y1="220" x2="906" y2="220" stroke="#94a3b8" stroke-width="2" marker-end="url(#tip)"/>
 
   <!-- ================= what the model learns ================= -->
-  <text x="40" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">What the model has to learn</text>
-  <text x="229" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">&#8212; the sequence features that govern translation initiation</text>
+  <text x="40" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Sequence determinants of initiation</text>
+  <text x="296" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">&#8212; the signals the model is required to recover from sequence alone</text>
 
   <rect x="40" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
   <rect x="40" y="414" width="3" height="42" rx="1.5" fill="#b91c1c"/>
@@ -161,13 +161,13 @@
   <text x="911" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#475569">Kozak context</text>
   <text x="911" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">strong (&#8722;3R, +4G) vs weak context</text>
 
-  <text x="40" y="482" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">Measured effect sizes, model performance and confidence intervals are reported in the results table, not here.</text>
+  <text x="40" y="482" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">Effect sizes, model performance and confidence intervals are reported in the results table.</text>
 
   <!-- ================= the design loop ================= -->
   <path d="M 1164 220 H 1184 V 524 H 16 V 220 H 36" fill="none" stroke="#0e7490" stroke-width="2"
         stroke-dasharray="7 5" marker-end="url(#tipLoop)"/>
   <rect x="455" y="515" width="290" height="26" rx="13" fill="#ffffff"/>
-  <text x="600" y="533" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e7490">proposed 5&#8242;UTRs go back into the construct</text>
+  <text x="600" y="533" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e7490">designed 5&#8242;UTRs re-enter the construct</text>
 
   <text x="600" y="576" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">Data: Sample et al. 2019, Nat Biotechnol (GEO GSE114002, eGFP unmodified library)</text>
 </svg>
