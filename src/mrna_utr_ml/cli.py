@@ -4,6 +4,7 @@ Subcommands are added as each stage of the project lands:
 
     download   fetch the Sample et al. 2019 MPRA data from GEO   (stage 2)
     synth      write a synthetic dataset with known ground truth (stage 2)
+    split      build reproducible train/val/test splits           (stage 3)
     train      train a model from a YAML config                  (stage 7)
     evaluate   score a trained model on the held-out test set    (stage 8)
     interpret  in silico mutagenesis to expose learned motifs    (stage 9)
@@ -20,6 +21,14 @@ import typer
 
 from mrna_utr_ml import __version__
 from mrna_utr_ml.data.download import GEO_URL, fetch_mpra
+from mrna_utr_ml.data.load import load_mpra
+from mrna_utr_ml.data.split import (
+    SplitStrategy,
+    assert_no_leakage,
+    describe_shift,
+    make_splits,
+    write_manifest,
+)
 from mrna_utr_ml.data.synthetic import make_synthetic_mpra
 
 app = typer.Typer(
@@ -90,6 +99,49 @@ def synth(
         f"observed MRL range {frame['rl'].min():.2f}-{frame['rl'].max():.2f}; "
         f"read depth {frame['total_reads'].min()}-{frame['total_reads'].max()}"
     )
+
+
+@app.command()
+def split(
+    data: Annotated[Path, typer.Option(help="MPRA csv(.gz) to split.")] = Path(
+        "data/raw/GSM3130435_egfp_unmod_1.csv.gz"
+    ),
+    strategy: Annotated[
+        SplitStrategy,
+        typer.Option(help="`published` matches Sample et al.; `random` avoids its shift."),
+    ] = SplitStrategy.random,
+    test_size: Annotated[int, typer.Option(help="Target test rows.")] = 20_000,
+    val_size: Annotated[int, typer.Option(help="Target validation rows.")] = 20_000,
+    seed: Annotated[int, typer.Option(help="Seed; fixes the split exactly.")] = 0,
+    manifest: Annotated[
+        Path, typer.Option(help="Where to write the split manifest.")
+    ] = Path("data/processed/split_manifest.json"),
+) -> None:
+    """Build train/validation/test splits and report any distribution shift.
+
+    Near-identical sequences are grouped and split as whole groups, so a
+    one-nucleotide variant of a training UTR can never appear in the test set.
+    """
+    frame = load_mpra(data)
+    typer.echo(f"loaded {len(frame):,} UTRs from {data}")
+
+    collapsed, result = make_splits(
+        frame, strategy=strategy, test_size=test_size, val_size=val_size, seed=seed
+    )
+    assert_no_leakage(collapsed, result)
+
+    typer.echo(
+        f"exact duplicates collapsed: {result.n_exact_duplicates_collapsed}; "
+        f"{result.n_grouped_sequences:,} sequences fall in "
+        f"{len(collapsed) - result.n_groups:,} near-duplicate merges"
+    )
+    typer.echo(f"sizes: {result.sizes()}")
+    typer.echo("")
+    typer.echo(describe_shift(collapsed, result).to_string(index=False))
+
+    written = write_manifest(collapsed, result, manifest)
+    typer.echo("")
+    typer.echo(f"manifest -> {manifest}  (test digest {written['digests']['test'][:16]}...)")
 
 
 if __name__ == "__main__":
