@@ -1,0 +1,30 @@
+# Conda environment for local development (Apple Silicon / Linux) and for Gadi.
+#   conda env create -f environment.yml && conda activate utr-mrl
+#   pip install -e ".[dev]"   # installs the package itself, no deps re-resolved
+#
+# Why conda rather than pip-only: torch and xgboost ship platform-specific
+# binaries. conda-forge resolves the right build for osx-arm64 and for Gadi's
+# linux-64 + CUDA, from one file.
+name: utr-mrl
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.26
+  - pandas>=2.1
+  - scipy>=1.11
+  - scikit-learn>=1.4
+  - xgboost>=2.0
+  - pytorch>=2.2
+  - optuna>=3.6
+  - typer>=0.12
+  - pyyaml>=6.0
+  - matplotlib>=3.8
+  - tqdm>=4.66
+  - requests>=2.31
+  - pyarrow>=15
+  # dev
+  - pytest>=8.0
+  - pytest-cov>=5.0
+  - ruff>=0.5

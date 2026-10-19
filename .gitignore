@@ -1,0 +1,54 @@
+# ---- Data (raw MPRA data is 61 MB+; re-downloadable from GEO, so never committed)
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+*.csv.gz
+*.parquet
+*.h5
+
+# ---- Trained weights and artefacts (regenerable; GitHub is not an artefact store)
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.ubj
+*.joblib
+
+# ---- Hyperparameter search databases
+*.db
+*.db-journal
+optuna*.log
+
+# ---- Run outputs
+logs/
+runs/
+reports/figures/*
+!reports/figures/.gitkeep
+reports/*.json
+reports/*.csv
+wandb/
+mlruns/
+
+# ---- Environments
+.venv/
+venv/
+env/
+.conda/
+*.egg-info/
+dist/
+build/
+
+# ---- Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ---- OS / editor
+.DS_Store
+.idea/
+*.swp

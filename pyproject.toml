@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mrna-utr-ml"
+version = "0.1.0"
+description = "Predict 5'UTR mean ribosome load from sequence, and design optimised 5'UTRs for mRNA constructs."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [{ name = "OYELAMI Favour Oluwapelumi", email = "oyefavour@gmail.com" }]
+keywords = ["mRNA", "5'UTR", "translation", "ribosome load", "MPRA", "deep learning"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+# Runtime deps only. Torch is declared here but on Gadi/conda it comes from the
+# environment.yml channel build instead -- pip would pull a CPU-only wheel.
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "xgboost>=2.0",
+  "torch>=2.2",
+  "optuna>=3.6",
+  "typer>=0.12",
+  "pyyaml>=6.0",
+  "matplotlib>=3.8",
+  "tqdm>=4.66",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.5"]
+
+[project.scripts]
+utr-mrl = "mrna_utr_ml.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/OYEFAVOUR/mrna-utr-ml"
+Issues = "https://github.com/OYEFAVOUR/mrna-utr-ml/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mrna_utr_ml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: tests that train a model (deselect with -m 'not slow')"]
