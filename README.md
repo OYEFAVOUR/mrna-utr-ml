@@ -6,13 +6,12 @@ model to propose optimised 5'UTRs for mRNA constructs.
 > **Status:** in active development, built stage by stage. Results table below is filled in at Stage 8.
 
 <p align="center">
-  <img src="docs/figures/overview.svg" alt="Four-stage loop: the mRNA construct, the polysome-profiling measurement that yields mean ribosome load, the sequence-to-MRL model, and the constrained optimiser whose proposed 5'UTRs feed back into the construct. Below, the effect sizes the model must learn, measured across all 326,033 real UTRs." width="100%">
+  <img src="docs/figures/overview.svg" alt="Four-stage loop: the mRNA construct, the polysome-profiling measurement that yields mean ribosome load, the sequence-to-MRL model, and the constrained optimiser whose proposed 5'UTRs feed back into the construct. Below, the sequence features the model has to learn: out-of-frame and in-frame upstream AUGs, GC content, and Kozak context." width="100%">
 </p>
 
 <p align="center">
-  <sub>Measure &rarr; learn &rarr; explain &rarr; design. Effect sizes in the lower panel are measured from the
-  real MPRA data in this repository, not taken from the paper &mdash; see
-  <a href="src/mrna_utr_ml/data/synthetic.py"><code>data/synthetic.py</code></a> for how they were derived.</sub>
+  <sub>Measure &rarr; learn &rarr; explain &rarr; design. Measured effect sizes and model performance are
+  reported in <a href="#results">Results</a>.</sub>
 </p>
 
 ---

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600"
-     role="img" aria-label="How the project works: a massively parallel assay measures ribosome load for 326,033 random 5-prime UTRs; a model learns the sequence rules; the rules are read out by in silico mutagenesis; an optimiser then proposes new UTRs, closing the design loop back to the mRNA construct.">
+     role="img" aria-label="How the project works: a massively parallel assay measures ribosome load for 326,033 random 5-prime UTRs; a model learns the sequence rules; the rules are read out by in silico mutagenesis; an optimiser then proposes new UTRs under design constraints, closing the loop back to the mRNA construct.">
   <title>From MPRA measurement to designed 5'UTRs</title>
   <desc>A four-stage loop: the mRNA construct, the polysome-profiling measurement, the sequence-to-MRL model, and the constrained optimiser that feeds proposed UTRs back into the construct.</desc>
 
@@ -48,19 +48,19 @@
   <!-- three transcripts carrying 1, 4 and 8 ribosomes -->
   <line x1="352" y1="201" x2="452" y2="201" stroke="#94a3b8" stroke-width="2"/>
   <circle cx="368" cy="196" r="5" fill="#64748b"/>
-  <text x="464" y="205" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">MRL 2.1</text>
+  <text x="464" y="205" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">MRL &#8776; 2</text>
 
   <line x1="352" y1="241" x2="452" y2="241" stroke="#94a3b8" stroke-width="2"/>
   <circle cx="368" cy="236" r="5" fill="#64748b"/><circle cx="388" cy="236" r="5" fill="#64748b"/>
   <circle cx="408" cy="236" r="5" fill="#64748b"/><circle cx="428" cy="236" r="5" fill="#64748b"/>
-  <text x="464" y="245" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">MRL 6.4</text>
+  <text x="464" y="245" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">MRL &#8776; 6</text>
 
   <line x1="352" y1="281" x2="452" y2="281" stroke="#94a3b8" stroke-width="2"/>
   <circle cx="360" cy="276" r="5" fill="#0e7490"/><circle cx="373" cy="276" r="5" fill="#0e7490"/>
   <circle cx="386" cy="276" r="5" fill="#0e7490"/><circle cx="399" cy="276" r="5" fill="#0e7490"/>
   <circle cx="412" cy="276" r="5" fill="#0e7490"/><circle cx="425" cy="276" r="5" fill="#0e7490"/>
   <circle cx="438" cy="276" r="5" fill="#0e7490"/><circle cx="451" cy="276" r="5" fill="#0e7490"/>
-  <text x="464" y="285" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e7490">MRL 9.2</text>
+  <text x="464" y="285" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e7490">MRL &#8776; 9</text>
 
   <text x="455" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">Mean ribosome load (MRL):</text>
   <text x="455" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">one value per UTR, bounded 0&#8211;13</text>
@@ -107,24 +107,22 @@
 
   <text x="930" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">start</text>
   <rect x="962" y="186" width="60" height="11" rx="2" fill="#cbd5e1"/>
-  <text x="1032" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">5.1</text>
 
   <text x="930" y="218" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v1</text>
   <rect x="962" y="209" width="84" height="11" rx="2" fill="#d8ccea"/>
-  <text x="1056" y="218" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">6.8</text>
 
   <text x="930" y="241" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v2</text>
   <rect x="962" y="232" width="110" height="11" rx="2" fill="#7c5fa8"/>
-  <text x="1082" y="241" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#5b21b6">8.0</text>
 
-  <text x="1035" y="268" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">held to manufacturable constraints</text>
-  <rect x="936" y="277" width="88" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="980" y="291" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">GC 40&#8211;60%</text>
-  <rect x="1032" y="277" width="100" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="1082" y="291" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">no new uAUG</text>
+  <text x="1035" y="258" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">predicted MRL &#8594;</text>
+  <text x="1035" y="277" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">held to manufacturable constraints</text>
+  <rect x="936" y="286" width="88" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="980" y="300" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">GC 40&#8211;60%</text>
+  <rect x="1032" y="286" width="100" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="1082" y="300" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">no new uAUG</text>
 
-  <text x="1035" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">in silico candidates only &#8212;</text>
-  <text x="1035" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">wet-lab validation still required</text>
+  <text x="1035" y="324" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">in silico candidates only &#8212;</text>
+  <text x="1035" y="340" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">wet-lab validation still required</text>
 
   <!-- ================= flow arrows between stations ================= -->
   <defs>
@@ -141,29 +139,29 @@
 
   <!-- ================= what the model learns ================= -->
   <text x="40" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">What the model has to learn</text>
-  <text x="229" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">&#8212; effect sizes measured across all 326,033 real UTRs</text>
+  <text x="229" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#94a3b8">&#8212; the sequence features that govern translation initiation</text>
 
   <rect x="40" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="40" y="414" width="3" height="42" rx="1.5" fill="#b91c1c"/>
   <text x="56" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#b91c1c">out-of-frame uAUG</text>
   <text x="56" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">captures the scanning 43S complex</text>
-  <text x="289" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#b91c1c">&#8722;2.7</text>
 
   <rect x="325" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="325" y="414" width="3" height="42" rx="1.5" fill="#c2740c"/>
   <text x="341" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#c2740c">in-frame uAUG</text>
   <text x="341" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">N-terminal extension, still functional</text>
-  <text x="574" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2740c">&#8722;0.9</text>
 
   <rect x="610" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="610" y="414" width="3" height="42" rx="1.5" fill="#0e7490"/>
   <text x="626" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">GC content</text>
   <text x="626" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">secondary structure impedes scanning</text>
-  <text x="859" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0e7490">&#8722;0.35</text>
 
   <rect x="895" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="895" y="414" width="3" height="42" rx="1.5" fill="#475569"/>
   <text x="911" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#475569">Kozak context</text>
   <text x="911" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">strong (&#8722;3R, +4G) vs weak context</text>
-  <text x="1144" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#475569">&#215;2.2</text>
 
-  <text x="40" y="482" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">Change in mean ribosome load against UTRs with no upstream AUG. GC is per +0.1 GC fraction. Kozak compares strong- with weak-context uAUGs (n = 80,247 single-uAUG UTRs).</text>
+  <text x="40" y="482" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">Measured effect sizes, model performance and confidence intervals are reported in the results table, not here.</text>
 
   <!-- ================= the design loop ================= -->
   <path d="M 1164 220 H 1184 V 524 H 16 V 220 H 36" fill="none" stroke="#0e7490" stroke-width="2"
