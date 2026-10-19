@@ -31,7 +31,7 @@
   <text x="165" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">you need. The 5&#8242;UTR is not.</text>
 
   <line x1="76" y1="277" x2="254" y2="277" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="165" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">more ribosomes per transcript</text>
+  <text x="165" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">higher ribosome load per transcript</text>
   <text x="165" y="316" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">= more protein per dose</text>
   <text x="165" y="332" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">= less LNP, less reactogenicity</text>
 
@@ -41,8 +41,9 @@
   <text x="352" y="123" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
   <text x="374" y="123" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">The measurement</text>
 
-  <text x="455" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">326,033 random 50-nt UTRs, one pooled assay</text>
-  <text x="455" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">polysome profiling sorts transcripts by ribosome count</text>
+  <text x="455" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">326,033 random 50-nt 5&#8242;UTRs, pooled</text>
+  <text x="455" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">polysome profiling resolves transcripts</text>
+  <text x="455" y="180" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">by ribosome occupancy</text>
 
   <!-- three transcripts carrying 1, 4 and 8 ribosomes -->
   <line x1="352" y1="201" x2="452" y2="201" stroke="#94a3b8" stroke-width="2"/>
@@ -61,8 +62,8 @@
   <circle cx="438" cy="276" r="5" fill="#0e7490"/><circle cx="451" cy="276" r="5" fill="#0e7490"/>
   <text x="464" y="285" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e7490">MRL 9.2</text>
 
-  <text x="455" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">Mean ribosome load: one number</text>
-  <text x="455" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">per UTR, from 0 to 13.</text>
+  <text x="455" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">Mean ribosome load (MRL):</text>
+  <text x="455" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" fill="#334155">one value per UTR, bounded 0&#8211;13</text>
 
   <!-- ================= station 3: the model ================= -->
   <rect x="620" y="90" width="250" height="260" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
@@ -101,28 +102,29 @@
   <text x="932" y="123" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
   <text x="954" y="123" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">The design</text>
 
-  <text x="1035" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">mutate, score, keep what climbs</text>
+  <text x="1035" y="151" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">in silico directed evolution</text>
+  <text x="1035" y="167" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8">mutate &#8594; score &#8594; select</text>
 
-  <text x="930" y="181" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">start</text>
-  <rect x="962" y="172" width="60" height="11" rx="2" fill="#cbd5e1"/>
-  <text x="1032" y="181" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">5.1</text>
+  <text x="930" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">start</text>
+  <rect x="962" y="186" width="60" height="11" rx="2" fill="#cbd5e1"/>
+  <text x="1032" y="195" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">5.1</text>
 
-  <text x="930" y="205" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v1</text>
-  <rect x="962" y="196" width="84" height="11" rx="2" fill="#d8ccea"/>
-  <text x="1056" y="205" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">6.8</text>
+  <text x="930" y="218" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v1</text>
+  <rect x="962" y="209" width="84" height="11" rx="2" fill="#d8ccea"/>
+  <text x="1056" y="218" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">6.8</text>
 
-  <text x="930" y="229" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v2</text>
-  <rect x="962" y="220" width="110" height="11" rx="2" fill="#7c5fa8"/>
-  <text x="1082" y="229" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#5b21b6">8.0</text>
+  <text x="930" y="241" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">v2</text>
+  <rect x="962" y="232" width="110" height="11" rx="2" fill="#7c5fa8"/>
+  <text x="1082" y="241" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#5b21b6">8.0</text>
 
-  <text x="1035" y="259" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">held to manufacturable constraints</text>
-  <rect x="936" y="268" width="88" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="980" y="282" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">GC 40&#8211;60%</text>
-  <rect x="1032" y="268" width="100" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="1082" y="282" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">no new uAUG</text>
+  <text x="1035" y="268" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">held to manufacturable constraints</text>
+  <rect x="936" y="277" width="88" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="980" y="291" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">GC 40&#8211;60%</text>
+  <rect x="1032" y="277" width="100" height="20" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="1082" y="291" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">no new uAUG</text>
 
-  <text x="1035" y="314" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">in silico candidates only &#8212;</text>
-  <text x="1035" y="330" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">wet-lab validation still required</text>
+  <text x="1035" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">in silico candidates only &#8212;</text>
+  <text x="1035" y="336" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309">wet-lab validation still required</text>
 
   <!-- ================= flow arrows between stations ================= -->
   <defs>
@@ -143,22 +145,22 @@
 
   <rect x="40" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="56" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#b91c1c">out-of-frame uAUG</text>
-  <text x="56" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">captures the scanning ribosome</text>
+  <text x="56" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">captures the scanning 43S complex</text>
   <text x="289" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#b91c1c">&#8722;2.7</text>
 
   <rect x="325" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="341" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#c2740c">in-frame uAUG</text>
-  <text x="341" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">still makes functional protein</text>
+  <text x="341" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">N-terminal extension, still functional</text>
   <text x="574" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2740c">&#8722;0.9</text>
 
   <rect x="610" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="626" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0e7490">GC content</text>
-  <text x="626" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">structure impedes scanning</text>
+  <text x="626" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">secondary structure impedes scanning</text>
   <text x="859" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0e7490">&#8722;0.35</text>
 
   <rect x="895" y="408" width="265" height="54" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
   <text x="911" y="429" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#475569">Kozak context</text>
-  <text x="911" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="#64748b">strong context vs weak</text>
+  <text x="911" y="447" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#64748b">strong (&#8722;3R, +4G) vs weak context</text>
   <text x="1144" y="438" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#475569">&#215;2.2</text>
 
   <text x="40" y="482" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10.5" fill="#94a3b8">Change in mean ribosome load against UTRs with no upstream AUG. GC is per +0.1 GC fraction. Kozak compares strong- with weak-context uAUGs (n = 80,247 single-uAUG UTRs).</text>
